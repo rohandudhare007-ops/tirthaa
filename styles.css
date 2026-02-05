@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     
     /* Your Beautiful Sunflower Field Background */
-background-image: url('images/gallery-6.jpg');    /* If the image is directly in images folder, use: */
+background-image: url('images/gallery-6.jpeg');    /* If the image is directly in images folder, use: */
     /* background-image: url('images/gallery-6.jpg'); */
     
     background-size: cover;
@@ -2038,7 +2038,7 @@ background-image: url('images/gallery-6.jpg');    /* If the image is directly in
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: textShine 3s ease-in-out infinite;
+    animation: textShine 6s ease-in-out infinite;
 }
 
 .swan-side p, .cat-side p {
@@ -2438,7 +2438,7 @@ background-image: url('images/gallery-6.jpg');    /* If the image is directly in
     width: 100%;
     height: 100%;
     object-fit: cover;
-    animation: catRun 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation: catRun 7s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     transform-origin: center;
 }
 
@@ -3117,8 +3117,8 @@ background-image: url('images/gallery-6.jpg');    /* If the image is directly in
 
 .footer-subtitle {
     font-size: 0.875rem !important;
-    color: rgba(110, 110, 110, 0.5) !important;
-    font-style: italic;
+    color: rgba(57, 2, 2, 0.5) !important;
+    font-style: oblique;
 }
 
 /* Responsive */
