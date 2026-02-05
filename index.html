@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Tirtha - A Love Story</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Fixed Navigation -->
+    <div class="fixed-wordmark">
+        <span class="font-playfair">Tirtha</span>
+    </div>
+    
+   <!-- Music Toggle -->
+<button id="musicToggle" class="music-toggle">
+    <div class="music-btn-bg"></div>
+    <div class="music-ripple"></div>
+    <div class="music-icon-wrapper">
+        <svg id="musicIcon" class="music-note-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <svg class="music-heart-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+    </div>
+    <span id="musicText" class="music-text">Play Music</span>
+    <div class="music-wave">
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+        <span class="wave-bar"></span>
+    </div>
+    <audio id="bgMusic" src="music/Ehsaas.mp3" loop></audio>
+</button>
+
+        <!-- Section 1: Hero with Sunflower -->
+        <section id="hero" class="hero-section">
+            <div class="floating-particles"></div>
+            
+            <!-- Decorative Sunflowers -->
+            <img src="images/hero-decorative.png" alt="" class="decorative-sunflower" style="top: 10%; right: 10%; width: 100px;">
+            <img src="images/hero-decorative.png" alt="" class="decorative-sunflower" style="bottom: 20%; left: 5%; width: 60px; animation-delay: -5s;">
+            <img src="images/hero-decorative.png" alt="" class="decorative-sunflower" style="top: 30%; left: 10%; width: 70px; animation-delay: -10s;">
+            
+            <div class="hero-content">
+                <!-- Main Sunflower -->
+                <div class="hero-sunflower-container">
+                    <div class="sun-glow"></div>
+                    <img src="images/hero-sunflower.png" alt="Beautiful Sunflower" class="hero-sunflower">
+                </div>
+                
+                <h1 class="hero-title">For Tirtha — The Girl Who Feels Like Sunshine, Sea Breeze, and Magic.</h1>
+                <p class="hero-subtitle">
+                  A small digital universe built with love.
+                  I Code For You, Sunshine.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('sunflower-section')">
+                        Explore Her Beauty
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('ocean-section')">
+                        Discover Her Ocean Heart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+      <!-- Section 2: Sunflower Gallery with Tirtha -->
+<section id="sunflower-section" class="section-pinned sunflower-section">
+    <!-- Animated Sunflower Particles -->
+    <div class="floating-particles">
+        <div class="sunflower-petal"></div>
+        <div class="sunflower-petal"></div>
+        <div class="sunflower-petal"></div>
+        <div class="sunflower-petal"></div>
+        <div class="sunflower-petal"></div>
+        <div class="sunflower-petal"></div>
+    </div>
+    
+    <!-- Glowing Light Rays -->
+    <div class="light-rays">
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+        <div class="ray"></div>
+    </div>
+    
+    <!-- Photo Grid -->
+    <div class="sunflower-grid">
+        <div class="sunflower-photo" data-tilt>
+            <div class="photo-overlay"></div>
+            <img src="images/sunflowerimage1.jpeg" alt="Tirtha with sunflower">
+            <div class="photo-shine"></div>
+        </div>
+        <div class="sunflower-photo" data-tilt>
+            <div class="photo-overlay"></div>
+            <img src="images/sunflowerimage2.jpeg" alt="Tirtha with sunflower">
+            <div class="photo-shine"></div>
+        </div>
+        <div class="sunflower-photo" data-tilt>
+            <div class="photo-overlay"></div>
+            <img src="images/sunflowerimage3.jpeg" alt="Tirtha with sunflower">
+            <div class="photo-shine"></div>
+        </div>
+        <div class="sunflower-photo" data-tilt>
+            <div class="photo-overlay"></div>
+            <img src="images/sunflowerimage4.jpeg" alt="Tirtha with sunflower">
+            <div class="photo-shine"></div>
+        </div>
+    </div>
+    
+    <!-- Text Content with Decorative Elements -->
+    <div class="sunflower-text glass-card">
+        <div class="text-decoration">
+            <svg class="sunflower-icon" viewBox="0 0 100 100" width="60" height="60">
+                <circle cx="50" cy="50" r="15" fill="#F4D03F"/>
+                <circle cx="50" cy="28" r="8" fill="#FFD700"/>
+                <circle cx="72" cy="50" r="8" fill="#FFD700"/>
+                <circle cx="50" cy="72" r="8" fill="#FFD700"/>
+                <circle cx="28" cy="50" r="8" fill="#FFD700"/>
+                <circle cx="64" cy="36" r="8" fill="#FFD700"/>
+                <circle cx="64" cy="64" r="8" fill="#FFD700"/>
+                <circle cx="36" cy="64" r="8" fill="#FFD700"/>
+                <circle cx="36" cy="36" r="8" fill="#FFD700"/>
+            </svg>
+        </div>
+        <h2 class="font-playfair">
+            <span class="text-shimmer">Like Sunflowers in Bloom</span>
+        </h2>
+        <p class="font-inter">
+            You are the brightest bloom . Your smile radiates warmth 
+            like the sun, and your presence fills every corner of my world with golden light. 
+            Just as sunflowers always turn toward the sun, my heart always turns toward you.
+        </p>
+        <div class="heart-pulse">💛</div>
+    </div>
+</section>
+<!-- Section 3: Ocean Section - Redesigned -->
+<section id="ocean-section" class="section-pinned ocean-section">
+    <!-- Animated Background Waves -->
+    <div class="ocean-background">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+    
+    <!-- Floating Bubbles -->
+    <div class="floating-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    
+    <!-- Swimming Fish -->
+    <div class="swimming-fish">
+        <div class="fish">🐠</div>
+        <div class="fish">🐟</div>
+        <div class="fish">🐡</div>
+    </div>
+    
+    <!-- Seashell Decorations -->
+    <div class="seashells">
+        <div class="shell">🐚</div>
+        <div class="shell">🐚</div>
+        <div class="shell">🐚</div>
+    </div>
+    
+    <!-- Photo Grid - Floating Cards -->
+    <div class="ocean-grid">
+        <div class="ocean-photo" data-depth="0.2">
+            <div class="photo-frame">
+                <div class="water-ripple"></div>
+                <img src="images/beach_main.jpeg" alt="Tirtha at the beach">
+                <div class="photo-glow"></div>
+            </div>
+            <div class="foam-effect"></div>
+        </div>
+        <div class="ocean-photo" data-depth="0.4">
+            <div class="photo-frame">
+                <div class="water-ripple"></div>
+                <img src="images/gallery_01.jpeg" alt="Ocean memories">
+                <div class="photo-glow"></div>
+            </div>
+            <div class="foam-effect"></div>
+        </div>
+        <div class="ocean-photo" data-depth="0.6">
+            <div class="photo-frame">
+                <div class="water-ripple"></div>
+                <img src="images/gallery_02.jpeg" alt="Ocean memories">
+                <div class="photo-glow"></div>
+            </div>
+            <div class="foam-effect"></div>
+        </div>
+    </div>
+    
+    <!-- Text Content with Ocean Theme -->
+    <div class="ocean-text glass-card">
+        <div class="wave-decoration">
+            <svg viewBox="0 0 100 20" width="100" height="20">
+                <path d="M0 10 Q 25 0, 50 10 T 100 10" stroke="#5DADE2" stroke-width="2" fill="none"/>
+                <path d="M0 15 Q 25 5, 50 15 T 100 15" stroke="#85C1E9" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+        <h2 class="font-playfair">
+            <span class="ocean-gradient-text">As Vast as the Ocean</span>
+        </h2>
+        <p class="font-inter">
+            Like the endless ocean, my love for you knows no bounds. Deep and powerful, 
+            calm yet mysterious. You are the gentle waves that touch my shore, the tranquil 
+            depths that hold my secrets, and the vast horizon that fills me with wonder.
+        </p>
+        <div class="anchor-decoration">⚓</div>
+    </div>
+    
+    <!-- Bottom Wave Animation -->
+    <div class="animated-waves">
+        <svg class="wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="wave-path wave-path-1" fill="rgba(255,255,255,0.3)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg class="wave-svg wave-svg-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path class="wave-path wave-path-2" fill="rgba(255,255,255,0.2)" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,213.3C960,203,1056,181,1152,181.3C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+</section>
+<!-- Section 4: Eyes Section - With Background Image -->
+<section id="eyes-section" class="section-pinned eyes-section">
+    <!-- Background with torn paper effect -->
+    <div class="eyes-background-overlay"></div>
+    <div class="floating-particles"></div>
+    
+    <!-- Photo Grid with Two Images -->
+    <div class="eyes-grid">
+        <!-- Image 1 - Portrait Full Face -->
+        <div class="eyes-photo eyes-photo-1">
+            <div class="image-wrapper">
+                <img src="images/eyesimage2..jpeg" alt="Joyful Gaze">
+                <div class="image-overlay">
+              <span class="image-label">........ninininin</span>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image 2 - Evening Portrait -->
+        <div class="eyes-photo eyes-photo-2">
+            <div class="image-wrapper">
+                <img src="images/eyesimages2.jpeg" alt="Evening Beauty">
+                <div class="image-overlay">
+                    <span class="image-label">teeeert</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Text Content -->
+    <div class="eyes-text glass-card">
+        <h2 class="font-playfair">Windows to Your Soul</h2>
+        <p class="font-inter">
+            In your eyes, I see galaxies of emotion, constellations of dreams, and universes 
+            of love. Every glance tells a story, every look holds a thousand words. Your eyes 
+            are the compass that guides me home, the stars that light my darkest nights.
+        </p>
+        
+        <div class="decorative-hearts">
+            <span class="heart">♡</span>
+            <span class="heart">♡</span>
+            <span class="heart">♡</span>
+        </div>
+    </div>
+
+    <!-- Add this in your HTML head, AFTER your main CSS -->
+<link rel="stylesheet" href="quick-text-fix.css">
+    <!-- Decorative Elements -->
+    <div class="floating-flowers">
+        <span class="flower">🌸</span>
+        <span class="flower">🌸</span>
+        <span class="flower">🌸</span>
+        <span class="flower">🌸</span>
+    </div>
+</section>
+
+      <!-- Section 5: Swan & Cat Section - Enhanced -->
+<section id="swan-cat-section" class="section-pinned swan-cat-section">
+    <!-- Animated Background Elements -->
+    <div class="nature-background"></div>
+    <div class="floating-leaves"></div>
+    <div class="water-ripples"></div>
+    
+    <div class="swan-cat-container">
+        <!-- Swan Side -->
+        <div class="swan-side">
+            <!-- Animated Swan Image -->
+            <div class="main-image-wrapper swan-wrapper">
+                <img src="images/swanimage2.jpeg" alt="Swan" class="swan-img swimming-animation">
+                <div class="water-effect"></div>
+            </div>
+            
+            <h3 class="font-playfair">Graceful as a Swan</h3>
+            <p class="font-inter">
+                Elegant, poised, and breathtakingly beautiful. You move through life with 
+                the grace of a swan gliding across still water, leaving ripples of wonder 
+                in your wake.
+            </p>
+            
+            <!-- Swan Photo Gallery -->
+            <div class="photo-gallery swan-gallery">
+                <div class="gallery-photo photo-1">
+                    <div class="photo-frame">
+                        <img src="images/swanimage4.jpeg" alt="Swan moment">
+                        <div class="photo-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Divider with Hearts -->
+        <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-hearts">
+                <span class="heart-icon">♡</span>
+                <span class="heart-icon">♡</span>
+                <span class="heart-icon">♡</span>
+            </div>
+            <div class="divider-line"></div>
+        </div>
+        
+        <!-- Cat Side -->
+        <div class="cat-side">
+            <!-- Animated Cat Image -->
+            <div class="main-image-wrapper cat-wrapper">
+                <img src="images/cat.jpg" alt="Cat" class="cat-img running-animation">
+                <div class="paw-prints">
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                    <span class="paw">🐾</span>
+                </div>
+            </div>
+            
+            <h3 class="font-playfair">Playful as a Kitten</h3>
+            <p class="font-inter">
+                Curious, playful, and endlessly charming. You bring joy and laughter into 
+                every moment, with a spirit as free and delightful as a kitten discovering 
+                the world.
+            </p>
+            
+            <!-- Cat Photo Gallery -->
+            <div class="photo-gallery cat-gallery">
+                <div class="gallery-photo photo-2">
+                    <div class="photo-frame">
+                        <img src="images/swanimage3.jpeg" alt="Playful moment">
+                        <div class="photo-shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-butterflies">
+        <span class="butterfly">🦋</span>
+        <span class="butterfly">🦋</span>
+        <span class="butterfly">🦋</span>
+    </div>
+</section>
+
+        <!-- Section 7: Gallery -->
+        <section id="gallery-section" class="gallery-section">
+            <div class="floating-particles"></div>
+            
+            <div class="gallery-header">
+                <h2 class="font-playfair">Uff Najar Na Lage..</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="images/img1.jpg" alt="Moment 1"></div>
+                <div class="gallery-item"><img src="images/img2.jpg" alt="Moment 2"></div>
+                <div class="gallery-item"><img src="images/img14.jpg" alt="Moment 3"></div>
+                <div class="gallery-item"><img src="images/img16.jpeg" alt="Moment 4"></div>
+                <div class="gallery-item"><img src="images/img5.jpg" alt="Moment 5"></div>
+                <div class="gallery-item"><img src="images/img6.jpg" alt="Moment 6"></div>
+                <div class="gallery-item"><img src="images/img7.jpg" alt="Moment 7"></div>
+                <div class="gallery-item"><img src="images/img13.jpg" alt="Moment 8"></div>
+                <div class="gallery-item"><img src="images/img9.jpg" alt="Moment 9"></div>
+                <div class="gallery-item"><img src="images/img10.jpg" alt="Moment 10"></div>
+                <div class="gallery-item"><img src="images/img11.jpg" alt="Moment 11"></div>
+                <div class="gallery-item"><img src="images/img15.jpg" alt="Moment 12"></div>
+            </div>
+        </section>
+
+       <!-- Section 8: Footer -->
+<section id="footer-section" class="footer-section">
+    <div class="footer-bg-image"></div>
+    <div class="floating-particles"></div>
+    
+    <div class="footer-content-wrapper">
+        <div class="footer-love-quote">
+            <svg class="quote-mark quote-left" width="40" height="40" viewBox="0 0 24 24" fill="rgba(245, 183, 177, 0.3)">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+            </svg>
+            <p class="floating-thought font-playfair">In your eyes, I found my home. In your smile, I found my peace. In your love, I found forever.</p>
+            <svg class="quote-mark quote-right" width="40" height="40" viewBox="0 0 24 24" fill="rgba(245, 183, 177, 0.3)">
+                <path d="M18 7h-3L13 11v6h6v-6h-3zM10 7H7L5 11v6h6v-6H8z"/>
+            </svg>
+        </div>
+        
+        <div class="footer-heart-divider">
+            <div class="heart-line"></div>
+            <svg class="heart-icon" width="32" height="32" viewBox="0 0 24 24" fill="#F5B7B1">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <div class="heart-line"></div>
+        </div>
+        
+        <div class="footer-main-content glass-card-enhanced">
+            <h2 class="font-playfair footer-title">Forever Yours, Tirtha</h2>
+            <p class="font-inter footer-message">
+                Every moment with you is a page in our endless love story. Thank you for being my sunshine on cloudy days, my calm in the storm, and my reason to believe in magic.
+            </p>
+            
+            <div class="love-promises">
+                <div class="promise-item">
+                    <span class="promise-icon">🌻</span>
+                    <p>I promise to make you smile every single day</p>
+                </div>
+                <div class="promise-item">
+                    <span class="promise-icon">🌊</span>
+                    <p>I promise to be your safe harbor in every storm</p>
+                </div>
+                <div class="promise-item">
+                    <p>I promise to love you more with each passing moment</p>
+                </div>
+            </div>
+            
+            <div class="footer-signatures">
+                <p class="font-playfair signature-line">Forever yours,</p>
+                <p class="font-playfair signature-line">For Nandini.</p>
+                <p class="font-playfair signature-line">For Tirtha.</p>
+                <p class="font-playfair signature-highlight">For the girl who owns my heart, my soul, and my every dream.</p>
+            </div>
+            
+            <div class="footer-buttons">
+                <button class="btn btn-primary" onclick="replayJourney()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Relive Our Journey
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer-credits">
+            <p class="made-with-love">Crafted with <svg width="14" height="14" viewBox="0 0 24 24" fill="#F5B7B1" stroke="#F5B7B1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> and endless devotion for Tirtha</p>
+            <p class="footer-subtitle">All Rights Reserved | Designed & Developed By Rohan Dudhare</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- Grain Overlay -->
+<div class="grain-overlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
