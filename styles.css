@@ -1521,12 +1521,21 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
 }
 
 /* ===================================
-   Eyes Section - Enhanced with Background Image
+   EYES SECTION - COMPLETE CSS
+   Full styling with mobile responsiveness
+   =================================== */
+
+/* ===================================
+   Base Section Styling
    =================================== */
 .eyes-section {
     background: linear-gradient(135deg, #F5E6D3 0%, #FFE5E0 50%, #FFF0E6 100%);
     position: relative;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Background Image with Torn Paper Effect */
@@ -1558,7 +1567,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     50% { opacity: 0.85; }
 }
 
-/* Floating Particles */
+/* ===================================
+   Floating Particles
+   =================================== */
 .floating-particles {
     position: absolute;
     inset: 0;
@@ -1606,7 +1617,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
-/* Main Grid Container - Two Images Side by Side */
+/* ===================================
+   Photo Grid - Two Images Side by Side
+   =================================== */
 .eyes-grid {
     position: absolute;
     left: 8%;
@@ -1683,7 +1696,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     animation: slideInLeft 1s ease-out 0.5s backwards, floatPhoto2 8s ease-in-out 1.7s infinite;
 }
 
-/* Hover Effects */
+/* ===================================
+   Hover Effects
+   =================================== */
 .eyes-photo:hover .image-wrapper {
     transform: translateY(-15px) scale(1.05) rotate(-3deg);
     box-shadow: 
@@ -1703,7 +1718,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     transform: translateY(0);
 }
 
-/* Floating Animation for Photos */
+/* ===================================
+   Floating Animations
+   =================================== */
 @keyframes floatPhoto1 {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-12px) rotate(2deg); }
@@ -1725,11 +1742,13 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
-/* Text Content - Enhanced */
+/* ===================================
+   Text Content Box
+   =================================== */
 .eyes-text {
     position: absolute;
     right: 8%;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     width: min(45vw, 550px);
     padding: 52px;
@@ -1796,7 +1815,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-/* Decorative Hearts */
+/* ===================================
+   Decorative Hearts
+   =================================== */
 .decorative-hearts {
     display: flex;
     gap: 18px;
@@ -1835,7 +1856,9 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
-/* Floating Flowers */
+/* ===================================
+   Floating Flowers
+   =================================== */
 .floating-flowers {
     position: absolute;
     inset: 0;
@@ -1894,7 +1917,11 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
-/* Responsive Design */
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+   =================================== */
+
+/* Tablet Landscape (1400px and below) */
 @media (max-width: 1400px) {
     .eyes-grid {
         left: 5%;
@@ -1913,6 +1940,7 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
+/* Tablet (1200px and below) */
 @media (max-width: 1200px) {
     .image-wrapper {
         width: 220px;
@@ -1929,6 +1957,50 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
+/* Tablet Portrait (1024px and below) */
+@media (max-width: 1024px) {
+    .eyes-section {
+        min-height: 100vh;
+        padding: 60px 0;
+    }
+
+    .eyes-grid {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 35%;
+        gap: 20px;
+    }
+
+    .image-wrapper {
+        width: 200px;
+        height: 240px;
+    }
+
+    .eyes-text {
+        right: 50%;
+        transform: translate(50%, -50%);
+        top: 75%;
+        width: 85%;
+        max-width: 500px;
+        padding: 40px 32px;
+    }
+
+    .eyes-text h2 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+    }
+
+    .eyes-text p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE
+   =================================== */
+
+/* Mobile Large (968px and below) */
 @media (max-width: 968px) {
     .eyes-grid {
         position: static;
@@ -1955,79 +2027,387 @@ background-image: url('images/gallery-6.jpeg');    /* If the image is directly i
     }
 }
 
-@media (max-width: 640px) {
+/* Mobile Medium (768px and below) */
+@media (max-width: 768px) {
+    .eyes-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+
+    /* Stack layout for mobile */
     .eyes-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 28px;
-        padding-top: 60px;
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 16px;
+        padding: 40px 20px 30px;
+        margin: 0 auto;
     }
-    
+
     .image-wrapper {
-        width: 240px;
-        height: 280px;
+        width: 160px;
+        height: 200px;
+        border-width: 4px;
     }
-    
+
+    .image-overlay {
+        padding: 12px;
+    }
+
+    .image-label {
+        font-size: 13px;
+    }
+
+    /* Text content below images */
     .eyes-text {
-        padding: 36px 28px;
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 36px 28px 40px;
     }
-    
+
     .eyes-text h2 {
         font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
     }
-    
+
+    .eyes-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+    }
+
+    .eyes-text p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+        margin-bottom: 20px;
+    }
+
+    .decorative-hearts {
+        gap: 14px;
+        margin-top: 28px;
+    }
+
     .decorative-hearts .heart {
         font-size: 24px;
     }
-    
+
+    /* Reduce flower size */
     .flower {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    /* Simplified animations for better performance */
+    .eyes-photo:hover .image-wrapper {
+        transform: translateY(-8px) scale(1.03);
+    }
+
+    /* Reduce blur for better performance */
+    .eyes-text {
+        backdrop-filter: blur(15px);
     }
 }
+
+/* Mobile Small (640px and below) */
+@media (max-width: 640px) {
+    .eyes-section {
+        padding: 40px 0;
+    }
+
+    /* Vertical stack for small mobile */
+    .eyes-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 30px 15px 20px;
+    }
+
+    .eyes-photo {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        max-width: 240px;
+        height: 280px;
+        margin: 0 auto;
+        border-width: 3px;
+    }
+
+    .image-overlay {
+        padding: 14px;
+    }
+
+    .image-label {
+        font-size: 14px;
+    }
+
+    .eyes-text {
+        width: 92%;
+        padding: 32px 24px 36px;
+        border-radius: 25px;
+        border-width: 2px;
+    }
+
+    .eyes-text h2 {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+
+    .eyes-text h2::after {
+        width: 70px;
+        height: 4px;
+        bottom: -12px;
+    }
+
+    .eyes-text p {
+        font-size: 0.92rem;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+    .decorative-hearts {
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .decorative-hearts .heart {
+        font-size: 22px;
+    }
+
+    /* Reduce floating elements */
+    .flower:nth-child(3),
+    .flower:nth-child(4) {
+        display: none;
+    }
+
+    .flower {
+        font-size: 18px;
+    }
+
+    /* Disable heavy animations on mobile for performance */
+    .eyes-photo-1,
+    .eyes-photo-2 {
+        animation: slideInLeftMobile 0.8s ease-out backwards;
+    }
+
+    @keyframes slideInLeftMobile {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
 /* ===================================
-   FIX: Move Text Content Upward
+   RESPONSIVE DESIGN - EXTRA SMALL
    =================================== */
 
-/* Eyes Section - Move text higher */
-.eyes-text {
-    position: absolute;
-    right: 8%;
-    top: 45%; /* Changed from 50% to 45% */
-    transform: translateY(-50%);
-    width: min(45vw, 550px);
-    padding: 52px;
-    backdrop-filter: blur(25px);
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 35px;
-    box-shadow: 
-        0 25px 70px rgba(139, 69, 19, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.9) inset,
-        0 5px 20px rgba(0, 0, 0, 0.1);
-    animation: slideInRight 1s ease-out 0.9s backwards;
-    z-index: 3;
-    border: 3px solid rgba(255, 240, 230, 0.8);
+/* Extra Small Mobile (480px and below) */
+@media (max-width: 480px) {
+    .eyes-section {
+        padding: 30px 0;
+    }
+
+    .eyes-grid {
+        gap: 20px;
+        padding: 25px 10px 15px;
+    }
+
+    .image-wrapper {
+        max-width: 220px;
+        height: 260px;
+    }
+
+    .eyes-text {
+        width: 94%;
+        padding: 28px 20px 32px;
+        border-radius: 20px;
+    }
+
+    .eyes-text h2 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    .eyes-text h2::after {
+        width: 60px;
+        height: 3px;
+        bottom: -10px;
+    }
+
+    .eyes-text p {
+        font-size: 0.88rem;
+        line-height: 1.65;
+        margin-bottom: 16px;
+    }
+
+    .decorative-hearts .heart {
+        font-size: 20px;
+    }
+
+    /* Remove background overlay for better performance */
+    .eyes-background-overlay {
+        opacity: 0.5;
+    }
+
+    /* Simplify background */
+    .eyes-section::before {
+        opacity: 0.7;
+    }
 }
 
-/* Alternative: If you want it even higher, use this instead */
-.eyes-text-higher {
-    position: absolute;
-    right: 8%;
-    top: 40%; /* Even higher position */
-    transform: translateY(-50%);
-    width: min(45vw, 550px);
-    padding: 52px;
-    backdrop-filter: blur(25px);
-    background: rgba(255, 255, 255, 0.92);
-    border-radius: 35px;
-    box-shadow: 
-        0 25px 70px rgba(139, 69, 19, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.9) inset,
-        0 5px 20px rgba(0, 0, 0, 0.1);
-    animation: slideInRight 1s ease-out 0.9s backwards;
-    z-index: 3;
-    border: 3px solid rgba(255, 240, 230, 0.8);
+/* Very Small Mobile (360px and below) */
+@media (max-width: 360px) {
+    .eyes-section {
+        padding: 25px 0;
+    }
+
+    .eyes-grid {
+        gap: 18px;
+        padding: 20px 8px 12px;
+    }
+
+    .image-wrapper {
+        max-width: 200px;
+        height: 240px;
+    }
+
+    .eyes-text {
+        width: 96%;
+        padding: 24px 18px 28px;
+    }
+
+    .eyes-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 14px;
+    }
+
+    .eyes-text p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .decorative-hearts {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .decorative-hearts .heart {
+        font-size: 18px;
+    }
+
+    /* Hide sparkles on very small screens */
+    .floating-particles::before,
+    .floating-particles::after {
+        display: none;
+    }
 }
 
+/* ===================================
+   LANDSCAPE MODE OPTIMIZATION
+   =================================== */
+@media (max-width: 968px) and (orientation: landscape) {
+    .eyes-section {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    .eyes-grid {
+        flex-direction: row;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .image-wrapper {
+        width: 140px;
+        height: 180px;
+    }
+
+    .eyes-text {
+        width: 50%;
+        max-width: 450px;
+        padding: 30px 24px;
+    }
+
+    .eyes-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .eyes-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+}
+
+/* ===================================
+   TOUCH DEVICE OPTIMIZATION
+   =================================== */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .eyes-photo:hover .image-wrapper {
+        transform: none;
+    }
+
+    .eyes-photo:hover img {
+        transform: none;
+    }
+
+    .eyes-photo:hover .image-overlay {
+        transform: translateY(0);
+    }
+
+    /* Always show overlay on touch devices */
+    .image-overlay {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(139, 69, 19, 0.7) 0%, transparent 80%);
+    }
+
+    /* Larger touch targets */
+    .eyes-photo {
+        padding: 10px;
+    }
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATION
+   =================================== */
+@media (max-width: 768px) {
+    /* Reduce animation complexity */
+    .eyes-photo:hover .image-wrapper {
+        transition: transform 0.3s ease;
+    }
+
+    .eyes-photo:hover img {
+        transform: scale(1.08);
+        transition: transform 0.4s ease;
+    }
+
+    /* Disable resource-intensive animations */
+    @keyframes overlayPulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 0.7; }
+    }
+
+    @keyframes floatPhoto1,
+    @keyframes floatPhoto2 {
+        0%, 100% { transform: none; }
+    }
+}
 /* Swan Section - Move text higher */
 .swan-side h3, .cat-side h3 {
     font-size: clamp(2.2rem, 4vw, 3rem);
